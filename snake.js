@@ -100,17 +100,17 @@ window.setTimeout(function(){
         if(document.getElementById("_easy").checked===true){
             console.log("Easy");
             gameRR = easyRR;
-            document.getElementById("speedValue").innerHTML = "11 FPS";
+            document.getElementById("speedValue").innerHTML = "11 BPS";
         }
         else if(document.getElementById("_medium").checked===true){
             console.log("Medium");
             gameRR = medRR;
-            document.getElementById("speedValue").innerHTML = "13 FPS";
+            document.getElementById("speedValue").innerHTML = "13 BPS";
         }
         else{
             console.log("Hard");
             gameRR = hardRR;
-            document.getElementById("speedValue").innerHTML = "16 FPS";
+            document.getElementById("speedValue").innerHTML = "16 BPS";
         }
     }
     function setMaze(){
@@ -188,11 +188,11 @@ window.setTimeout(function(){
             if(gameRR != hardRR){
                 if(gameRR=== easyRR){
                     gameRR = medRR;
-                    document.getElementById("speedValue").innerHTML = "13 FPS";
+                    document.getElementById("speedValue").innerHTML = "13 BPS";
                 }
                 else{
                     gameRR = hardRR;
-                    document.getElementById("speedValue").innerHTML = "16 FPS";                    
+                    document.getElementById("speedValue").innerHTML = "16 BPS";                    
                 }
             }
         }
@@ -200,11 +200,11 @@ window.setTimeout(function(){
             if(gameRR!= easyRR && document.getElementById("speedDec").onclick){
                 if(gameRR===hardRR){
                     gameRR = medRR;
-                    document.getElementById("speedValue").innerHTML = "13 FPS";
+                    document.getElementById("speedValue").innerHTML = "13 BPS";
                 }
                 else{
                     gameRR = easyRR;
-                    document.getElementById("speedValue").innerHTML = "11 FPS";
+                    document.getElementById("speedValue").innerHTML = "11 BPS";
                 }
             }
         }       
