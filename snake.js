@@ -519,7 +519,7 @@ window.setTimeout(function(){
     //GAME LOOP DEFINITIONS
     var snake;
     function activity(){
-        gameSound.pause();
+        // gameSound.pause();
         timeout = window.setTimeout(function(){
             if(isPaused===false){
                 if(playCount===1){
