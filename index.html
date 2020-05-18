@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="arrows.css">
+        <link rel="stylesheet" type="text/css" href="animations.css">
+        <link rel="stylesheet" type="text/css" href="music.css">
+        <link rel="stylesheet" type="text/css" href="adjust.css">
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+        <!-- <script src="snake.js" type="text/javascript"></script> -->
+        <script src="snake.js" type="text/javascript"></script>
+        <script src="functions.js" type="text/javascript"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header id="initial">            
+            <button id="begin_button">
+                &#xe00b;
+            </button>
+            <div id="heading_front">
+                Snake
+            </div>
+        </header>
+        <header id="second">
+            <div id="input">
+                <h1 id="form_heading">A few more things</h1>
+                <form id="input_form">
+                    <span class="input_form__heading">
+                        Select the difficulty level
+                    </span>
+                    <label class="container">
+                        <input type="radio" name="diff" id="_easy" checked="checkbox">
+                        <span class="checkbox"></span>
+                        <span class="input_text">Easy</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="diff" id="_medium">
+                        <span class="checkbox"></span>
+                        <span class="input_text">Medium</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="diff" id="_hard">
+                        <span class="checkbox"></span>
+                        <span class="input_text">Hard</span>
+                    </label>
+                    <span class="input_form__heading">
+                        Mode of play
+                    </span>
+                    <label class="container">
+                        <input type="radio" name="maze" id="_maze">
+                        <span class="checkbox"></span>
+                        <span class="input_text">Maze</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="maze" id="_nomaze" checked="checked">
+                        <span class="checkbox"></span>
+                        <span class="input_text">No maze</span>
+                    </label>                    
+                </form>
+                <button id="game_start_button">
+                    &#xe00b;
+                 </button>
+            </div>
+        </header>
+        <div id="third">
+            <div id="buttonsLeft">
+                <button class="finalButton" id="pause" title="Play/Pause">r</button>
+                <button class="finalButtonRight" id="instructions" title="Help">&#xe049;</button>
+                <button class="finalButton" id="stop" title="Stop the game">A</button>
+                <div id="scoreArea">
+                    Score &nbsp;<span class="headerValue" id="scoreValue">0</span>
+                </div>
+                <div id="speedArea">
+                    Speed &nbsp;
+                    <span class="headerValue">
+                        <span id="speedValue">11FPS</span>
+                        <span id="dir">&#xe008;</span>
+                    </span>                                        
+                </div>
+                <button class="finalButton" id="speedDec" title="Decrease speed">y</button>
+                <button class="finalButton" id="speedInc" title="Increase speed">g</button>
+            </div> 
+            <div class="play">
+                <div id="playingRegion">
+                    <div id="gameOverHeading">
+                        GAME OVER!!
+                    </div>
+                    <div id="gameOverText">
+                        Refresh the page to try again
+                    </div> 
+                    <canvas id="playingArea"></canvas>
+                </div>                           
+            </div>
+            <div id="autoButton">
+                Auto Mode
+            </div> 
+        </div>
+        <section id="infoPage">
+            <div id="infoPagePopup">
+                <div id="popupClose">
+                    &#xe00e;
+                </div>
+                <div class="popupHeading">
+                    Instructions
+                </div>
+                <div class="popupText">
+                    <ol>
+                        <li>Use Arrow keys to control the snake</li>
+                        <li>Use Escape or the Pause/Play button at the top to Pause/Play</li>
+                        <li>Use the Forward, Reverse and Fast-Forward Keys to change the speed</li>
+                        <li>Use the Stop key to stop the game at any moment</li>
+                    </ol>
+                </div>
+            </div>
+        </section>                      
+    </body>
+</html>

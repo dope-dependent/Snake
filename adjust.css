@@ -1,0 +1,150 @@
+@media only screen and (max-width:520px){
+    #begin_button{
+        font-size: 4rem;
+        top:50%;
+        left:45%;
+        /* transform: translate(-50%,-50%); */
+    }
+    #heading_front{
+        font-size: 6rem;
+        font-weight: bold;
+        text-shadow: 0rem 1rem 2rem yellow;
+    }
+}
+
+@media only screen and (max-width:700px){
+    #input{
+        height: 80%;
+    }
+    #form_heading{
+        font-size: 4.5rem;
+    }
+    .input_form__heading{
+        font-size: 2.8rem;
+    }
+    .container{
+        display: block;
+        font-size: 2.5rem;
+    }
+    .checkbox{
+        height: 25px;
+        width: 25px;
+        border-width: 0.3rem;
+    }
+    .container .checkbox:after{
+        height: 9px;
+        width: 9px;
+        left: 8px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    #form_heading{
+        font-size: 3.5rem;
+    }
+    .input_form__heading{
+        font-size: 2.3rem;
+    }
+    .container{
+        display: block;
+        font-size: 2rem;
+    }
+    #game_start_button{
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width:1050px){
+    .play{
+        height:83%;
+        top:112px;
+    }
+    #speedDec{
+        position: absolute;
+        top:56px;
+        left:0;
+    }
+    #speedInc{
+        position: absolute;
+        top:56px;
+        left:8.4rem;
+    }
+    #speedArea{
+        position: absolute;
+        top:56px;
+        left:16.7rem;
+    }
+    
+    
+}
+@media only screen and (max-width:560px){
+    .play{
+        height:74%;
+        top:168px;
+    }
+    #third{
+        position: relative;
+    }
+    #scoreArea{
+        position: absolute;
+        top:112px;
+        left:50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+    }
+    #speedArea{
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .play{
+        top:126px;
+        height:500px;
+    }
+    #scoreArea{
+        top:80px;
+        position: absolute;
+        font-size: 2rem;
+        left:40%; 
+    }
+    #speedArea{
+        top:40px;
+        font-size: 2rem;
+        margin-left: 0;
+        left:14rem;
+    }
+    .finalButton{
+        font-size: 3rem;
+    }
+    .finalButtonRight{
+        font-size: 3rem;
+    }
+    #speedInc{
+        top:40px;
+        left:7rem;
+    }
+    #speedDec{
+        top:40px;
+    }
+    #autoButton{
+        top:626px;
+        font-size: 2.5rem;
+    }
+    #popupClose{
+        font-size: 2rem;
+    }
+    .headerValue{
+        padding:0 2rem;
+    }
+    
+}
+/* 
+@media only screen and (max-width:1800px){
+    #initial{
+        display: none;
+    }
+    #second{
+        display: none;
+    }
+} */

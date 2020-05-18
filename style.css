@@ -1,0 +1,552 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Patrick Hand', cursive;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+#heading_front{
+    position: absolute;
+    top:40%;
+    left:50%;
+    color:#5D4335;
+    transform: translate(-50%,-50%);
+    font-size: 10rem;    
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 0rem 1rem 4rem yellow; 
+}
+
+
+#initial{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(to left,rgba(255, 255, 255, 0.205),rgba(255, 255, 255, 0.205)), url(img/jungle1.jpg);
+    background-size: 100% 100%;
+    /* display: none; */
+}
+
+#begin_button{
+    position:absolute;
+    top:55%;
+    left:47%;
+    display: inline-block;
+    border: none;
+    font-size: 7rem;
+    box-shadow: border-box;
+    transition: ease-out 0.2s;
+    letter-spacing: 4px;
+    cursor: pointer;
+    color: purple;
+    animation-name: Flash;
+    animation-iteration-count: 100;
+    animation-duration: 1s;
+    font-family: "linea-arrows-10";
+    src:url("fonts/linea-arrows-10.eot");
+    src:url("fonts/linea-arrows-10.eot?#iefix") format("embedded-opentype"),
+        url("fonts/linea-arrows-10.woff") format("woff"),
+        url("fonts/linea-arrows-10.ttf") format("truetype"),
+        url("fonts/linea-arrows-10.svg#linea-arrows-10") format("svg");
+    font-weight: bolder;
+    font-style: normal;
+    background-color:transparent;
+    color:rgb(255, 255, 0);
+    padding-left:0.4rem;
+    border-radius: 50%;
+    text-shadow: 0rem 2rem 4rem rgba(93, 67, 53, 0.795);
+    outline: none;
+}
+
+#begin_button:hover{
+    color: RED;
+    transition: all 0.4s;
+    transform: translateY(-3px);
+    /* background-color:red; */
+    /* box-shadow:0rem 1rem 2rem rgb(124, 0, 0); */
+    animation-play-state: paused;
+}
+
+#begin_button:active{
+    transform: translateY(1px);
+}
+
+
+.large_text{
+    font-size: 6rem;
+    color:olivedrab;
+    font-weight: bold;
+    text-shadow:0rem 1rem 2.5rem olivedrab;
+}
+
+
+/* Page Number 2 */
+
+#second{
+    position: absolute;
+    z-index: 90;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to top,rgba(255, 255, 255, 0.281),rgba(255, 255, 255, 0.281)), url(img/jungle2.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+#input{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:70%;
+    height: 70%;
+    /* background-color: rgba(0, 0, 0, 0.65); */
+    padding:3rem;
+    border:none;
+    /* border-radius: 25%; */
+    /* box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.95); */
+    /* border:1px solid whitesmoke */
+}
+
+#input_form{
+    text-align: left;
+}
+.input_form__heading{
+    display: block;
+    letter-spacing: 1px;
+    font-size: 3.5rem;
+    margin: 2rem;
+    font-weight: bold;
+    color: rgb(4, 0, 255);
+}
+#form_heading{
+    font-size: 6rem;
+    color: #522A16;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0rem 1rem 3rem #522A16;
+}
+
+.container{
+    position: relative;
+    font-size: 3rem;
+    margin:1rem 3rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    color:rgba(0, 0, 0, 0.7);
+}
+.container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox{
+    box-sizing: border-box;
+    display:inline-block;
+    background-color:transparent;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 0.4rem solid;
+}
+
+.container:hover input ~ .checkbox{
+    background-color: #000000;
+}
+
+.container:hover #_easy ~ .checkbox{
+    border-color: rgb(2, 139, 2);
+}
+.container:hover #_easy ~ .input_text{
+    color:rgb(2, 139, 2);
+}
+.container:hover #_medium ~ .checkbox{
+    color:rgb(162, 0, 255);
+}
+.container:hover #_medium ~ .input_text{
+    color: rgb(162, 0, 255);
+}
+.container:hover #_hard ~ .checkbox{
+    border-color: rgb(255,0,0);
+}
+.container:hover #_hard ~ .input_text{
+    color: rgb(255, 0, 0);
+}
+
+.container:hover #_maze ~ .checkbox{
+    border-color: rgb(255, 0, 0);
+}
+.container:hover #_maze ~ .input_text{
+    color: rgb(255, 0, 0);
+}
+
+
+.container:hover #_nomaze ~ .checkbox{
+    border-color: rgb(2, 139, 2);
+}
+.container:hover #_nomaze ~ .input_text{
+    color: rgb(2, 139, 2);
+}
+.checkbox:after{
+    content:"";
+    display: none;
+    position: absolute;
+}
+
+.container input:checked ~ .checkbox::after{
+    display: block;
+}
+
+.container .checkbox:after{
+    left:9px;
+    top:9px;
+    width:13px;
+    height: 13px;
+    border-radius: 50%;
+    transform: translate(-50%);
+    -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+#game_start_button{
+    margin:3rem;
+    font-size: 5rem;
+    display:inline-block;
+    src:url("fonts/linea-arrows-10.eot");
+    src:url("fonts/linea-arrows-10.eot?#iefix") format("embedded-opentype"),
+        url("fonts/linea-arrows-10.woff") format("woff"),
+        url("fonts/linea-arrows-10.ttf") format("truetype"),
+        url("fonts/linea-arrows-10.svg#linea-arrows-10") format("svg");
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "linea-arrows-10";
+    background-color: transparent;
+    position: relative;
+    border: none;
+    text-align: center;
+    transition: all 0.2s;
+    outline:none;    
+}
+
+#game_start_button:hover{
+    transform: scale(1.2);
+    /* text-shadow: 0rem 1rem 2rem rgb(0,0,255); */
+    cursor: pointer;
+    color: rgb(0,0,255);
+}
+
+/* SOME EFFECTS ON THE BUTTONS */
+.container #_easy:checked + .checkbox:after{
+    background-color: rgb(2, 139, 2);
+}
+.container #_easy:checked + .checkbox{
+    border-color: rgb(2, 139, 2);
+}
+.container #_easy:checked ~ .input_text{
+    color: rgb(2, 139, 2);
+}
+
+.container #_medium:checked + .checkbox:after{
+    background-color: rgb(162, 0, 255);
+}
+.container #_medium:checked + .checkbox{
+    border-color:rgb(162, 0, 255);
+}
+.container #_medium:checked ~ .input_text{
+    color:rgb(162, 0, 255);
+}
+
+.container #_hard:checked + .checkbox:after{
+    background-color: #FF0000;
+}
+.container #_hard:checked + .checkbox{
+    border-color: #FF0000;
+}
+.container #_hard:checked ~ .input_text{
+    color: rgb(255,0,0);
+}
+
+.container #_maze:checked + .checkbox:after{
+    background-color: #FF0000;
+}
+.container #_maze:checked + .checkbox{
+    border-color: #FF0000;
+}
+.container #_maze:checked ~ .input_text{
+    color: rgb(255,0,0);
+}
+.container #_nomaze:checked + .checkbox:after{
+    background-color: rgb(2, 139, 2);
+}
+.container #_nomaze:checked + .checkbox{
+    border-color: rgb(2, 139, 2);
+}
+.container #_nomaze:checked ~ .input_text{
+    color: rgb(2, 139, 2);
+}
+.input_text{
+    font-weight: bold;
+}
+
+
+/* CSS FOR THE MAIN GAME PAGE */
+#buttonsLeft{
+    position: absolute;
+    z-index:50;
+    background-color:transparent ;
+    box-shadow:0rem 2rem 4rem  #AAD418;
+    /* float: left; */
+    width: 100%;
+    height:56px;
+    /* background-color: rgba(255, 245, 156, 0.8);
+ */
+}
+.finalButton{
+    font-family: "linea-music-10";
+    src:url("fonts-music/linea-music-10.eot");
+    src:url("fonts-music/linea-music-10.eot?#iefix") format("embedded-opentype"),
+    url("fonts-music/linea-music-10.woff") format("woff"),
+    url("fonts-music/linea-music-10.ttf") format("truetype"),
+    url("fonts-music/linea-music-10.svg#linea-music-10") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-size: 4.3rem;
+    cursor: pointer;
+    padding:0.5rem 2rem;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    float: left;
+    outline: none;
+}
+
+.finalButton:hover{
+    text-shadow: 0rem 2rem 3rem black;
+    transition: ease 0.2s;
+    transform: scale(1.1);
+}
+.play{
+    width:100%;
+    height:91%;
+    top:56px;
+    background-image: url(img/snake2.jpg);
+    background-size: 100% 100%;
+    position: relative;
+    text-align: center;
+    
+}
+
+#playingRegion{
+    position: absolute;
+    z-index:0;
+    top:20%;
+    left:23%;
+    width:65%;
+    height:60%;
+    background-color: transparent;
+    /* background-color:black; */
+    font-size: 4rem;
+}
+#playingArea{
+    display: inline-block;
+    background-color: transparent;
+    text-align: center;
+    /* border:0.1rem solid black; */
+    /* box-shadow: 0rem 2rem 4rem rgba(0,0,0,0.8); */
+    /* border: 0.2rem solid white; */
+   
+}
+
+#third{
+    height: 100vh;
+    width: 100%;
+    background-color: #AAD418;
+}
+
+.finalButtonRight{
+    font-family: "linea-arrows-10";
+    src:url("fonts/linea-arrows-10.eot");
+    src:url("fonts/linea-arrows-10.eot?#iefix") format("embedded-opentype"),
+        url("fonts/linea-arrows-10.woff") format("woff"),
+        url("fonts/linea-arrows-10.ttf") format("truetype"),
+        url("fonts/linea-arrows-10.svg#linea-arrows-10") format("svg");
+    font-weight: bold;
+    font-style: normal;   
+    float: right;
+    font-size: 4.3rem;
+    cursor: pointer;
+    padding:0.5rem 2rem;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.finalButtonRight:hover{
+    text-shadow: 0rem 1rem 3rem black;
+    transition: ease 0.2s;
+    font-weight: bolder;
+    /* transform: scale(1.1); */
+}
+
+/* INFORMATION PAGE SECTION */
+#infoPage{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 59;
+    display: none;
+    transition: all 0.3s;
+}
+
+#infoPagePopup{
+    position: absolute;
+    z-index:60;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:70%;
+    background-color:greenyellow;
+    padding:2rem;
+    box-shadow:0rem 1rem 3rem greenyellow;
+    transition: all 0.2s;
+    border-radius: 2px;
+}
+#popupClose{
+    position: absolute;
+    padding:0.9rem;
+    right:0;
+    top:0;
+    color:black;
+    font-size: 4rem;
+    font-family: "linea-arrows-10";
+    src:url("fonts/linea-arrows-10.eot");
+    src:url("fonts/linea-arrows-10.eot?#iefix") format("embedded-opentype"),
+        url("fonts/linea-arrows-10.woff") format("woff"),
+        url("fonts/linea-arrows-10.ttf") format("truetype"),
+        url("fonts/linea-arrows-10.svg#linea-arrows-10") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    cursor: pointer;   
+    transition: all 0.3s;
+}
+#popupClose:hover{
+    text-shadow: 0rem 1rem 3rem darkgreen;
+    transform: translateY(-0.3rem) scale(1.1);
+    color: rgb(255, 0, 128);
+}
+
+.popupHeading{
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    color:black;
+    text-shadow: 0rem 0.5rem 1rem black;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.popupText{
+    padding:1rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    color: rgb(255, 0, 128);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* WHERE WE KEEP THE SCORE */
+#scoreArea{
+    float: left;
+    margin-left: 3rem;
+    font-size: 3rem;
+    padding:1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.headerValue{
+    display: inline-block;
+    background-color:rgb(255, 107, 28);
+    box-shadow:0rem 1rem 3rem hsla(0, 0%, 0%, 0.5);
+    padding:0 4rem;
+    color:white;
+    border: 0.1rem solid black;
+}
+
+/* WHERE WE KEEP TRACK OF THE SPEED */
+#speedArea{
+    float: left;
+    margin-left: 3rem;
+    font-size: 3rem;
+    padding:1rem;
+    text-transform: uppercase;
+    font-weight:bold;
+    letter-spacing: 2px;
+}
+
+#dir{
+    font-family: "linea-arrows-10";
+    src:url("fonts/linea-arrows-10.eot");
+    src:url("fonts/linea-arrows-10.eot?#iefix") format("embedded-opentype"),
+        url("fonts/linea-arrows-10.woff") format("woff"),
+        url("fonts/linea-arrows-10.ttf") format("truetype"),
+        url("fonts/linea-arrows-10.svg#linea-arrows-10") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    position: relative;
+    top:0.4rem;
+}
+
+#gameOverHeading{
+    display: none;
+    font-size: 6rem;
+    color:black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+}
+#gameOverText{
+    display: none;
+    font-size: 4rem;
+    color: black;
+}
+
+#autoButton{
+    position: fixed;
+    bottom:0;
+    left:0;
+    padding:0 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: transparent;
+    color:black;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+#autoButton:hover{
+    transform: scale(1.1);
+}
