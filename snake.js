@@ -11,7 +11,8 @@ window.setTimeout(function(){
         var img = document.getElementById("playingRegion");
         var canvas = getComputedStyle(img);
         width = parseInt(canvas.getPropertyValue('width'),10);
-        height = parseInt(canvas.getPropertyValue('height'),10);        
+        height = parseInt(canvas.getPropertyValue('height'),10);
+        widthChecker();        
         width = Math.floor(width/scale)*scale;
         height = Math.floor(height/scale)*scale;        
         cs = document.getElementById("playingArea");
