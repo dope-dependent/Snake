@@ -1,20 +1,24 @@
-# KTJ-Training-Assign-2
-=================================================================
+# Snake
+Responsive online game based on a rendition of the popular game Snake created using `HTML`, `CSS` and `JavaScript`
 
-Notes:
-1. Responsive Snake game using HTML, CSS and pure JS only.
-2. Swipe included for mobiles.
-3. Game scoring stats:   
-  a. Speed for the game is defined in BPS (blocks per second).    
-  b. Easy   - 11 BPS  
-  c. Medium - 13 BPS  
-  d. Hard   - 16 BPS  
-4. Score for each difficulty is different   
-  a. Easy   - 10   
-  b. Medium - 12   
-  c. Hard   - 15   
+### Deployment
+The game is deployed at [https://dope-dependent.github.io/Snake/](https://dope-dependent.github.io/Snake/)
 
-5. Enjoy yourself!
+### Contributors
+Fully created by [Rajas Bhatt](https://github.com/dope-dependent/) for Kshitij, IIT Kharagpur
 
-Created By  : Rajas Bhatt    
-Created For : KTJ Summer Training    
+### Features
+1. Swipe instead of Arrow Keys for Mobile Devices
+2. Three different difficulty levels
+3. Different Scoring mechanisms for each difficultly level
+4. Automatic and Manual Mode for player convenience
+
+### Game Mechanics
+Speed for the game is defined in Blocks per second (BPS) and scores for each difficulty are different for a better user experience
+
+   Difficulty  | Speed (BPS)  | Score
+   ----------- | :----------: | ------
+   Easy        | 11 BPS       | 10 Points
+   Medium      | 13 BPS       | 12 Points
+   Hard        | 16 BPS       | 15 Points
+
